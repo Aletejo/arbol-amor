@@ -1,4 +1,4 @@
-
+// Cargar el SVG y animar los corazones
 fetch('Img/treelove.svg')
   .then(res => res.text())
   .then(svgText => {
@@ -98,7 +98,7 @@ function showSignature() {
     dedication.appendChild(signature);
   }
   let firma = getURLParam('firma');
-  signature.textContent = firma ? decodeURIComponent(firma) : "Con amor, Zero";
+  signature.textContent = firma ? decodeURIComponent(firma) : "Con amor, Tu Pinguinito";
   signature.classList.add('visible');
 }
 
@@ -111,6 +111,7 @@ function startFloatingObjects() {
   function spawn() {
     let el = document.createElement('div');
     el.className = 'floating-petal';
+    el.innerHTML = "❤";
     // Posición inicial
     el.style.left = `${Math.random() * 90 + 2}%`;
     el.style.top = `${100 + Math.random() * 10}%`;
@@ -143,8 +144,8 @@ function showCountdown() {
   const container = document.getElementById('countdown');
   let startParam = getURLParam('start');
   let eventParam = getURLParam('event');
-  let startDate = startParam ? new Date(startParam + 'T00:00:00') : new Date('2024-08-03T00:00:00'); 
-  let eventDate = eventParam ? new Date(eventParam + 'T00:00:00') : new Date('2025-08-03T00:00:00');
+  let startDate = startParam ? new Date(startParam + 'T00:00:00') : new Date('2024-02-15T00:00:00'); 
+  let eventDate = eventParam ? new Date(eventParam + 'T00:00:00') : new Date('2026-02-15T00:00:00');
 
   function update() {
     const now = new Date();
