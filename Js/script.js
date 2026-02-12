@@ -220,7 +220,7 @@ function playBackgroundMusic() {
     btn.style.cursor = 'pointer';
     document.body.appendChild(btn);
   }
-  audio.volume = 0.7;
+  audio.volume = 0.08;
   audio.loop = true;
   // Intentar reproducir inmediatamente
   audio.play().then(() => {
